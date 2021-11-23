@@ -1,0 +1,33 @@
+
+h2{
+    font-size: large;
+    color: white;
+}
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+body{
+    background-color: #212F3C;
+}
+
+article{
+
+    height: 300px;
+}
+p{
+    color: white;
+}
+table{
+    border: 1px solid white; color:white;
+}
+tr,td,th{
+    border: 1px solid white; color:white;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}

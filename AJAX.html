@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<h2>Request Story</h2>
+<button type="button" onclick="loadDoc()">Request story</button>
+<p id="demo"></p>
+
+<script>
+    function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("demo").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "taleof.txt");
+        xhttp.send();
+    }
+</script>
+<a href="index.html">HOME</a>
+</body>
+</html>
