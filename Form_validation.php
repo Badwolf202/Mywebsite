@@ -22,11 +22,11 @@ if (!isset($_POST['submit']))
 <div class="container-fluid text-center">
     <fieldset> <legend><h3> Account creation form </h3></legend>
         <form method="post" action="Form_validation.php">
-            <p><strong>First Name:</strong><br>
+            <p class="form-check-input" style="color: white"><strong>First Name:</strong><br>
                 <input type="text" name="firstname" required></p>
-            <p><strong>Last Name:</strong><br>
+            <p class="form-check-input" style="color: white"><strong>Last Name:</strong><br>
                 <input type="text"  name="lastname" required></p>
-            <p><strong>Email:</strong><br>
+            <p class="form-check-input" style="color: white"><strong>Email:</strong><br>
                 <input type="text"  name="email" required></p>
             <p><input class="btn btn-outline-primary" type="submit" name="submit" value="Add user"/></p>
         </form>
@@ -47,8 +47,9 @@ if (!isset($_POST['submit']))
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
     $sql = "SELECT * from users;";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-    echo "Value inserted into table";
-    echo "<a>HOME</a>";
+    echo "<h2 class='h2 mb-3' style='color: white'>Value inserted into table</h2>";
+    echo "<a class='brn btn-outline-primary'>HOME</a>";
 }
 
 ?>
+<body class="bg-dark">
