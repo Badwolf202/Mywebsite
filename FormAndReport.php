@@ -12,7 +12,7 @@
     $sql = "SELECT * from users";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
-        echo "<h2> User List: </h2>";
+        echo "<h2 class='h2 mb-3' style='color: white;'> User List: </h2>";
         echo "<table class=\"table\">";
         echo "<tr><th>First Name</th> <th>Last name</th> <th>Email</th> </tr>";
 
@@ -26,6 +26,6 @@
         echo "</table>";
 
 ?>
-<a class='btn btn-outline-primary my-2 my-sm-0 ' href='index.html' role='button'>Home</a>
+<a class='btn btn-outline-primary my-2 my-sm-0 text-center' href='index.html' role='button'>Home</a>
 </body>
 </html>

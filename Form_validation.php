@@ -29,7 +29,7 @@ color: white;
     <title>User Login</title>
 </head>
 
-<body style="background-color: #212F3C">
+<body class="container-fluid bg-dark" >
 <div class="w-auto h-auto container-fluid">
     <section class="row-cols-1 btn-toolbar h-100">
         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
