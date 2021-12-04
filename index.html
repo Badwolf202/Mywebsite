@@ -1,105 +1,75 @@
 <!DOCTYPE html>
 <!--<?php?>-->
 <html lang="en">
-<style>
-    * {
-        box-sizing: border-box;
-    }
-    h2{
-        color: white;
-    }
-    p{
-        text-align: center;
-        color: white;
-    }
-    nav {
-        float: left;
-        width: 15%;
-        height: 225px; /* only for demonstration, should be removed */
-        padding: 20px;
-    }
-    section {
-        background-color: #2E4053;
-    }
-    nav ul{
-        list-style-type: none;
-        padding: 0;
-        border-color: #1B2631;
-        background-color: #AEB6BF;
-        border-style: solid;
-        border-width: 2px;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    article{
-        float: left;
-        padding: 20px;
-        width: 65%;
-        height: auto;
-    }
-    section::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    header {
-        padding: 30px;
-        text-align: center;
-        font-size: 35px;
-        color: black;
-
-    }
-    body{
-        background-color: #212F3C;
-    }
-    footer{
-        color: blue;
-        float: bottom;
-        height: 50px;
-
-    }
-</style>
 <head>
     <meta charset="UTF-8">
     <title>Noah's Site</title>
 </head>
-<body>
+<body class="w-100 bg-dark">
 <div class="content">
-    <header>
-        <h2><strong>Welcome to Noah's website</strong></h2>
-    </header>
-    <section>
-        <nav>
-<!--            <ul>-->
-<!--                <li ><a href="https://youtu.be/dQLSvvUTnYA">Funny Song</a></li>-->
-<!--                <li ><a href="https://c.tenor.com/csmPA2hAwK0AAAAC/monkey-spin.gif">Funny Monkey</a></li>-->
-<!--                <li ><a href="https://youtu.be/7XduYIKu20Q">Funny meme</a></li>-->
-<!--                <li ><a href="https://media.discordapp.net/attachments/892515375978270741/902939786107584632/cry_about_it.gif">Funny Man</a></li>-->
-<!--            </ul>-->
-            <ul>
-                <li><a href="Resume.pdf" target="_blank">Noah's Resume</a></li>
-                <li><a href="Form_validation.php">Form Validation</a></li>
-                <li><a href="FormAndReport.php">Form and Report</a></li>
-                <li><a href="AJAX.html">AJAX</a></li>
-                <li><a href="JQuery.html">JQery demo</a></li>
-                <li><a href="Other.html">Other projects</a></li>
-                <li><a href="https://noahb742252897.wordpress.com" target="_blank">Word Press</a></li>
-                <li><a href="https://www.linkedin.com/in/noah-blake-4aa9a5226/" target="_blank">LinkedIn</a></li>
-            </ul>
-        </nav>
+    <div class="card-header" >
+        <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
 
-        <article>
-        <p>Welcome to Noah Blake's Website </p>
-<!--            <img src="croc.png" width="400" height="400">-->
-<!--            <img src="Jared_squatch.jpg" width="400" height="400">-->
+    </div>
+    <div class="w-auto h-auto container-fluid">
+        <section class="row-cols-1 btn-toolbar h-100">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+                <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                    <span class="fs-4">Noah's Site</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="JQuery.html" class="nav-link active" aria-current="page">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                            JQuery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="AJAX.html" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                            AJAX
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Form_validation.php" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                            Form Validation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="FormAndReport.php" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                            Report
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://cdn.discordapp.com/attachments/816093593399328800/896114209484595250/2dbcms7xovr71.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>  Calibur202</strong>
+                    </a>
+                </div>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="Resume.html">Resume</a></li>
+                    <li><a class="dropdown-item" href="https://www.linkedin.com/in/noah-blake-4aa9a5226/">LinkedIn</a></li>
+                    <li><a class="dropdown-item" href="https://noahb742252897.wordpress.com/">Blog</a></li>
+                </ul>
+            </div>
 
-    </article>
-    </section>
-    <footer>
+
+            </div>
+
+    </div>
+    <footer class="card-footer text-center" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
     </footer>
+    </section>
+
 
 
 </div>
