@@ -6,7 +6,7 @@
 <h2>Request Story</h2>
 <button type="button" onclick="loadDoc()">Request story</button>
 <p id="demo"></p>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     function loadDoc() {
         const xhttp = new XMLHttpRequest();
@@ -17,6 +17,20 @@
         xhttp.send();
     }
 </script>
+<script>
+    function load2() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("tester").innerHTML = this.responseText;
+        }
+        xhttp.open("POST", "tester.txt");
+        xhttp.send("fname=Noah&lname=Blake");
+    }
+</script>
+<button class="button" onclick="load2()">Do a Post method</button>
+<br>
+<p id="tester"></p>
+<br>
 <a href="index.html">HOME</a>
 </body>
 </html>
