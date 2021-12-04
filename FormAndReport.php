@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Table</title>
 </head>
-<body class="container-fluid">
+<body class="container-fluid bg-dark">
 <?php
     $mysqli = mysqli_connect("localhost", "noahb", "letmein", "testDB");
     $sql = "SELECT * from users";
@@ -26,7 +26,6 @@
         echo "</table>";
 
 ?>
-<a href="index.html">HOME</a>
 <a class='btn btn-outline-primary my-2 my-sm-0 ' href='index.html' role='button'>Home</a>
 </body>
 </html>
