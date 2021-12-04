@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <title>Table</title>
 </head>
-<body>
+<body class="container-fluid">
 <?php
     $mysqli = mysqli_connect("localhost", "noahb", "letmein", "testDB");
     $sql = "SELECT * from users";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
         echo "<h2> User List: </h2>";
-        echo "<table class=\"center\">";
+        echo "<table class=\"table\">";
         echo "<tr><th>First Name</th> <th>Last name</th> <th>Email</th> </tr>";
 
         while ($row = mysqli_fetch_array($result)){
@@ -27,5 +27,6 @@
 
 ?>
 <a href="index.html">HOME</a>
+<a class='btn btn-outline-primary my-2 my-sm-0 ' href='index.html' role='button'>Home</a>
 </body>
 </html>
