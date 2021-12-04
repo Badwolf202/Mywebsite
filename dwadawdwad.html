@@ -1,16 +1,3 @@
-<?php
-$mysqli = mysqli_connect("localhost", "noahb", "letmein", "testDB");
-$email = filter_input(INPUT_POST, 'email');
-$fname = filter_input(INPUT_POST, 'firstname');
-$lname = filter_input(INPUT_POST, 'lastname');
-
-$conn = new mysqli("localhost", "noahb", "letmein");
-// Check connection
-
-if (!isset($_POST['submit']))
-{
-
-?>
 
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -38,17 +25,3 @@ if (!isset($_POST['submit']))
 <body>
 
 </html>
-
-<?php
-}else{
-//$sql = "INSERT INTO `members` (`firstname`, `lastname`, `email`, `password`, `age`, `gender`,
- //`startdate`) VALUES ('$first', '$last', '$smallMail', SHA1('$password'),'$age', '$gender', CURRENT_DATE())";
-    $sql = "INSERT INTO `users` (`fname`,`lname`,`email`) VALUES ('$fname','$lname','$email')";
-    $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-    $sql = "SELECT * from users;";
-    $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-    echo "Value inserted into table";
-    echo "<a>HOME</a>";
-}
-
-?>
