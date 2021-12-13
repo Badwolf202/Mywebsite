@@ -3,8 +3,14 @@
 <?php
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
-echo "2";
-$data = mysqli_query($mysqli, "SELECT * FROM 'gameRev';");
+$conn = new mysqli(localhost, root, letmein);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo " 2";
+$data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
 echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
 echo "<table>";
 echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
