@@ -3,7 +3,7 @@
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
 echo "2";
-$data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
+$data = mysqli_query($mysqli, "SELECT * FROM gameRev");
 
 if (!$mysqli -> query("SELECT * from `gameRev`;")) {
     echo("Error description: " . $mysqli -> error);
