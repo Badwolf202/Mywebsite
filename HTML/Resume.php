@@ -16,10 +16,10 @@ session_start();
     <?php
 
     if(!empty($_SESSION['logged_in'])){
-        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
+        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='../PHP/logout.php' role='button'>Logout</a>";
     }else{
-        echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='PHP/applyaccount.php' role='button'>Register</a>";
-        echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='HTML/Login.html' role='button'>Login</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='../PHP/applyaccount.php' role='button'>Register</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='../HTML/Login.html' role='button'>Login</a>";
     }
     ?>
 
@@ -34,25 +34,25 @@ session_start();
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="HTML/JQuery.php" class="nav-link" aria-current="page">
+                    <a href="../HTML/JQuery.php" class="nav-link" aria-current="page">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                         JQuery
                     </a>
                 </li>
                 <li>
-                    <a href="HTML/AJAX.php" class="nav-link text-white">
+                    <a href="../HTML/AJAX.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                         AJAX
                     </a>
                 </li>
                 <li>
-                    <a href="PHP/sqltableresults.php" class="nav-link text-white">
+                    <a href="../PHP/sqltableresults.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                         All Reviews
                     </a>
                 </li>
                 <li>
-                    <a href="HTML/Resume.php" class="nav-link text-white">
+                    <a href="../HTML/Resume.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                         Resume
                     </a>
@@ -62,14 +62,14 @@ session_start();
                 if(!empty($_SESSION['logged_in'])){
                     ?>
                     <li>
-                        <a href="PHP/MakeReview.php" class="nav-link text-white">
+                        <a href="../PHP/MakeReview.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                             Make Review
                         </a>
                     </li>
 
                     <li>
-                        <a href="HTML/Holder.html" class="nav-link text-white">
+                        <a href="../HTML/Holder.html" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                             Holder (Tester Page)
                         </a>
