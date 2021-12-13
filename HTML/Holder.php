@@ -102,7 +102,7 @@ session_start();
             xhttp.onload = function() {
                 document.getElementById("demo").innerHTML = this.responseText;
             }
-            xhttp.open("GET", "../Jared_squatch.jpg");
+            xhttp.open("GET", "../taleof.txt");
             xhttp.send();
         }
     </script>
