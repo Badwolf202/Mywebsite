@@ -70,7 +70,7 @@
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
         echo "<style>td{font-size: large; color:white;}, tr { font-size: large; color:white;}</style>";
         echo "<table class='table table-bordered'>";
-        echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
+        echo "<thead class='text-center'><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
         //write out the current ticket
         echo "<tbody>";
         while ($row = $data->fetch_assoc()) {
