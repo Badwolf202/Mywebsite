@@ -62,11 +62,11 @@
                 <hr>
             </div>
 
-    <div class="container-fluid text-center float-right">
+    <div class="container text-center float-right">
         <?php
 $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
 $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
-        echo "<style>td{font-size: large color:white}, tr { font-size: large color:white}</style>";
+        echo "<style>td{font-size: large; color:white;}, tr { font-size: large; color:white;}</style>";
         echo "<table class='table-borderless'>";
         echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
         //write out the current ticket
