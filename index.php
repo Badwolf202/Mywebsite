@@ -84,6 +84,7 @@ session_start();
 
     </div>
     <article class="container-fluid" style="padding-left: 400px; padding-right: 200px; margin: 15px">
+        <h1>Game reviews</h1>
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
