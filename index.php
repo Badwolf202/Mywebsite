@@ -62,7 +62,7 @@
                 <hr>
             </div>
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center float-none">
         <?php
 $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
 $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
