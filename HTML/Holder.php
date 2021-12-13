@@ -94,7 +94,7 @@ session_start();
 
     <h2>Request Story</h2>
     <button type="button" onclick="loadDoc()">Request story</button>
-    <p id="demo"></p>
+    <p id="demo" style="color: white"></p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function loadDoc() {
@@ -118,7 +118,7 @@ session_start();
     </script>
     <button class="button" onclick="load2()">Do a Post method</button>
     <br>
-    <p id="tester"></p>
+    <p id="tester" style="color: white"></p>
     <br>
     <a href="../index.php">HOME</a>
 </article>
