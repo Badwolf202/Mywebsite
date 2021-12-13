@@ -85,7 +85,7 @@ session_start();
 </div>
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
 
-    <h2>Request Story</h2>
+    <h2 style="color: white">Request Story</h2>
     <button style="color: white" class="btn-outline-primary" type="button" onclick="loadDoc()">Request story</button>
     <p id="demo" style="color: white"></p>
     <br>
