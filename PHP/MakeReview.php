@@ -201,7 +201,7 @@ if (!isset($_POST['submit']))
 
     </div>
     <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
-        <h2 class="h2 mb-3"> Review posted</h2>
+        <h2 class="h2 mb-3 text-center" style="color: white" > Review posted</h2>
     </article>
 
 

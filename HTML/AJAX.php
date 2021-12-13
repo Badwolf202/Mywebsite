@@ -93,7 +93,7 @@ session_start();
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
 
     <h2>Request Story</h2>
-    <button type="button" onclick="loadDoc()">Request story</button>
+    <button class="btn-outline-primary" type="button" onclick="loadDoc()">Request story</button>
     <p id="demo" style="color: white"></p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -116,16 +116,11 @@ session_start();
             xhttp.send("fname=Noah&lname=Blake");
         }
     </script>
-    <button class="button" onclick="load2()">Do a Post method</button>
+    <button class="btn-outline-primary"  type="button" onclick="load2()">Do a Post method</button>
     <br>
     <p id="tester" style="color: white"></p>
     <br>
-    <a href="../index.php">HOME</a>
 </article>
-</article>
-
-
-</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

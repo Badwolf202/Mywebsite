@@ -46,15 +46,9 @@ session_start();
                         </a>
                     </li>
                     <li>
-                        <a href="PHP/Form_validation.php" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                            Form Validation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="PHP/FormAndReport.php" class="nav-link text-white">
+                        <a href="PHP/sqltableresults.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                            Report
+                            All Reviews
                         </a>
                     </li>
                     <li>
@@ -77,10 +71,9 @@ session_start();
                         <li>
                             <a href="HTML/Holder.html" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                                Holder
+                                Holder (Tester Page)
                             </a>
                         </li>
-
                         <?php
                     }
                     ?>
