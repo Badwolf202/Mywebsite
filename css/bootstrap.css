@@ -56,13 +56,15 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #000214;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -633,11 +635,12 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  align: center;
 }
 
 @media (min-width: 576px) {
   .container-sm, .container {
-    max-width: 540px;
+    max-width: 300px;
   }
 }
 @media (min-width: 768px) {

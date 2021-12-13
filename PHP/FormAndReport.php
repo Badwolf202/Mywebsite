@@ -26,6 +26,7 @@
         echo "</table>";
 
 ?>
-<a class='btn btn-outline-primary my-2 my-sm-0 text-center' href='index.html' role='button'>Home</a>
+
 </body>
+<a class='btn btn-outline-primary my-2 my-sm-0 text-center' href='index.php' role='button'>Home</a>
 </html>

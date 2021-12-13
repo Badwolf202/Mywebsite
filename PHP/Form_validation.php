@@ -30,7 +30,7 @@ if (!isset($_POST['submit']))
                 <input type="text"  name="email" required></p>
             <p><input class="btn btn-outline-primary" type="submit" name="submit" value="Add user"/></p>
         </form>
-        <a class="btn btn-outline-primary" href="index.html">HOME</a>
+        <a class="btn btn-outline-primary" href="index.php">HOME</a>
         <br>
         <br>
         <a  class="btn btn-outline-primary" href="FormAndReport.php">User Tables</a>
