@@ -17,8 +17,8 @@ $lowerEmail = strtolower($email);
         $sql = "INSERT INTO `user` (`email`,`pass`) VALUES ('$lowerEmail',SHA1('$password'))";
         if (mysqli_query($mysqli, $sql))
         {
-            echo "<h3 class='h3 mb-3 text-center' style='text-align: center'>Your Account has been created! Thank you for joining us!<h3>";
-            echo "<h6 class='h6 mb-3 text-center' style='text-align: center'><a href='../index.php' >Back to main</a></h6>";
+            echo "<h3 class='h3 mb-3 text-center' style='text-align: center; color: white' >Your Account has been created! Thank you for joining us!<h3>";
+            echo "<h6 class='h6 mb-3 text-center' style='text-align: center'><a href='../index.php'  class=' btn btn-outline-primary'>Back to main</a></h6>";
         }
 }
 ?>
