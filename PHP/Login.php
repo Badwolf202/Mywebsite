@@ -9,7 +9,7 @@ if ((!isset($_POST["username"])) || (!isset($_POST["password"]))) {
 }
 }
 
-$mysqli = new mysqli("localhost", "noahb", "letmein", "compDB");
+$mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
 
 //create and issue the query
 $targetname = filter_input(INPUT_POST, 'email');
