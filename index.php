@@ -64,9 +64,7 @@
 
 
     </div>
-    <article>
-    <div class="content">
-    <div class="container-fluid text-center position-fixed float-end" style="padding: 25px">
+    <article class="container-fluid text-center position-fixed float-end">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
@@ -80,9 +78,7 @@
         }
         echo "</tbody>";
         echo "</table><br>";
-        ?>
-    </div>
-    </div>
+?>
     </article>
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
