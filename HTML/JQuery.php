@@ -147,10 +147,10 @@ session_start();
 
 
 
-<p>If you click on the "Hide" button, I will disappear.</p>
+<h2 class="h2" style="color: white"><p>If you click on the "Hide" button, I will disappear.</p></h2>
 
-<button id="hide">Hide</button>
-<button id="show">Show</button>
+<button class="btn-outline-primary" id="hide">Hide</button>
+<button class="btn-outline-primary" id="show">Show</button>
 
 
 <div class="container">
