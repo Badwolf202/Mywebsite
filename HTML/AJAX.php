@@ -88,10 +88,10 @@ session_start();
     <h2>Request Story</h2>
     <button style="color: white" class="btn-outline-primary" type="button" onclick="loadDoc()">Request story</button>
     <p id="demo" style="color: white"></p>
-
+    <br>
     <div id="three">
         <h1>The XMLHttpRequest Object</h1>
-        <button type="button" onclick="loadDoc()">Change Content</button>
+        <button type="button" onclick="loadDoc3()">On Ready</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
