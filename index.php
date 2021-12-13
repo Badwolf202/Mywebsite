@@ -34,7 +34,7 @@ session_start();
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="HTML/JQuery.php" class="nav-link active" aria-current="page">
+                        <a href="HTML/JQuery.php" class="nav-link" aria-current="page">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                             JQuery
                         </a>
@@ -111,13 +111,6 @@ session_start();
         echo "</table><br>";
         ?>
     </article>
-    </article>
-
-
-
-
-
-</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

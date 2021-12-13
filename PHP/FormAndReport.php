@@ -13,12 +13,11 @@
 
         echo "<h2 class='h2 mb-3' style='color: white;'> User List: </h2>";
         echo "<table class=\"table\">";
-        echo "<tr><th>First Name</th> <th>Last name</th> <th>Email</th> </tr>";
+        echo "<tr><th>Email</th>  </tr>";
 
         while ($row = mysqli_fetch_array($result)){
             echo "<tr>";
             echo "<td>".$row["email"]."</td>";
-            echo "<td>".$row["pass"]."</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -26,5 +25,5 @@
 ?>
 
 </body>
-<a class='btn btn-outline-primary my-2 my-sm-0 text-center' href='index.php' role='button'>Home</a>
+<button class='btn btn-outline-primary my-2 my-sm-0 text-center' href='index.php' role='button'>Home</button>
 </html>

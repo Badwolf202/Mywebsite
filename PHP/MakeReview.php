@@ -132,13 +132,10 @@ if (!isset($_POST['submit']))
     $sql = "INSERT INTO `gameRev` (`gpu`,`cpu`,`ram`,`numOfFans`,`dspace`,`name`,`email`) VALUES ('$Gname','$Rate','$Notes')";
     if (mysqli_query($mysqli, $sql)) {
 
-    }else{
+    } else {
         echo "Please try again";
 
     }
 
-
-    if (!isset($_POST['submit']))
-    {
-    }
+}
     ?>
