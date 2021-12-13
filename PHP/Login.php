@@ -14,7 +14,7 @@ $mysqli = new mysqli("localhost", "noahb", "letmein", "compDB");
 //create and issue the query
 $targetname = filter_input(INPUT_POST, 'email');
 $targetpasswd = filter_input(INPUT_POST, 'password');
-$sql = "SELECT * FROM fart WHERE email = '$targetname' and pass = SHA1('" . $targetpasswd . "')";
+$sql = "SELECT * FROM user WHERE email = '$targetname' and pass = SHA1('" . $targetpasswd . "')";
 
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
