@@ -60,6 +60,18 @@ session_start();
                             Report
                         </a>
                     </li>
+                    <li>
+                        <a href="HTML/Resume.html" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                            Resume
+                        </a>
+                    </li>
+<!--                    <li>-->
+<!--                        <a href="FormAndReport.php" class="nav-link text-white">-->
+<!--                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>-->
+<!--                            Report-->
+<!--                        </a>-->
+<!--                    </li>-->
                 </ul>
                 <hr>
         </section>
@@ -75,8 +87,10 @@ session_start();
         echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
         //write out the current ticket
         echo "<tbody>";
-        while ($row = $data->fetch_assoc()) {
+        $count = 1;
+        while ($row = $data->fetch_assoc() && $count != 5) {
             echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td>";
+            $count++;
         }
         echo "</tbody>";
         echo "</table><br>";
