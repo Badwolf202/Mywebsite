@@ -60,10 +60,11 @@
                     <li><a class="dropdown-item" href="https://noahb742252897.wordpress.com/">Blog</a></li>
                 </ul>
             </div>
-
+        </section>
 
 
     </div>
+    <article>
     <div class="content">
     <div class="container-fluid text-center position-fixed float-end" style="padding: 25px">
         <?php
@@ -82,10 +83,11 @@
         ?>
     </div>
     </div>
+    </article>
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
     </footer>
-    </section>
+
 
 
 
