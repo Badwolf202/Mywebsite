@@ -14,7 +14,7 @@
 
     </div>
     <div class="w-auto h-auto container-fluid">
-        <section class="btn-toolbar h-100 float-left">
+        <section class="btn-toolbar position-fixed h-100 float-left">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
                 <a href="../index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
@@ -64,7 +64,7 @@
 
 
     </div>
-    <div class="container text-center position-fixed">
+    <div class="container  text-center position-fixed">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
