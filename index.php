@@ -62,28 +62,29 @@
                 <hr>
             </div>
 
-    <div class="container-fluid>
+    <div class="container-fluid">
         <style>
-        td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>
+        td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}
+        </style>
          <?php
 
-         $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
-         $data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
+    $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
+    $data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
 
-         if ($mysqli->connect_error) {
-             die("Connection failed: " . $mysqli->connect_error);
-         }
-         echo "Connected successfully";
+    if ($mysqli->connect_error) {
+        die("Connection failed: " . $mysqli->connect_error);
+    }
+    echo "Connected successfully";
 
-         echo "<table class='table'>";
-         echo "<thead><tr><td>Game Name</td><td> Rating</td><td>Notes</td></tr></thead>";
-         echo "<tbody>";
-         while ($row = $data->fetch_assoc()) {
-             echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
-         }
-         echo "</tbody>";
-         echo "</table><br>";
-         ?>
+    echo "<table class='table'>";
+    echo "<thead><tr><td>Game Name</td><td> Rating</td><td>Notes</td></tr></thead>";
+    echo "<tbody>";
+    while ($row = $data->fetch_assoc()) {
+        echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
+    }
+    echo "</tbody>";
+    echo "</table><br>";
+    ?>
     </div>
 
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
