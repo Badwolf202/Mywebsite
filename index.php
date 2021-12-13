@@ -57,6 +57,20 @@ session_start();
                             Resume
                         </a>
                     </li>
+
+                    <li>
+                        <a href="https://noahb742252897.wordpress.com" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                            Wordpress
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/noah-blake-4aa9a5226/" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                            Linkedin
+                        </a>
+                    </li>
                     <?php
 
                     if(!empty($_SESSION['logged_in'])){
