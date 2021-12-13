@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
@@ -18,9 +17,8 @@
 
         while ($row = mysqli_fetch_array($result)){
             echo "<tr>";
-            echo "<td>".$row["fname"]."</td>";
-            echo "<td>".$row["lname"]."</td>";
             echo "<td>".$row["email"]."</td>";
+            echo "<td>".$row["pass"]."</td>";
             echo "</tr>";
         }
         echo "</table>";
