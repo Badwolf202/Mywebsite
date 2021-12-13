@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <?php
 session_start();
+$mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
+$Gname = filter_input(INPUT_POST, 'name');
+$Rate = filter_input(INPUT_POST, 'rat');
+$Notes = filter_input(INPUT_POST, 'notes');
+
+
+if (!isset($_POST['submit']))
+{
 ?>
 <html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="../https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <head>
     <meta charset="UTF-8">
@@ -16,10 +24,10 @@ session_start();
     <?php
 
     if(!empty($_SESSION['logged_in'])){
-        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
+        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='../PHP/logout.php' role='button'>Logout</a>";
     }else{
-        echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='PHP/applyaccount.php' role='button'>Register</a>";
-        echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='HTML/Login.html' role='button'>Login</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='../PHP/applyaccount.php' role='button'>Register</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='../HTML/Login.html' role='button'>Login</a>";
     }
     ?>
 
@@ -34,31 +42,31 @@ session_start();
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="HTML/JQuery.html" class="nav-link active" aria-current="page">
+                    <a href="../HTML/JQuery.php" class="nav-link active" aria-current="page">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                         JQuery
                     </a>
                 </li>
                 <li>
-                    <a href="HTML/AJAX.html" class="nav-link text-white">
+                    <a href="../HTML/AJAX.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                         AJAX
                     </a>
                 </li>
                 <li>
-                    <a href="PHP/Form_validation.php" class="nav-link text-white">
+                    <a href="../PHP/Form_validation.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
                         Form Validation
                     </a>
                 </li>
                 <li>
-                    <a href="PHP/FormAndReport.php" class="nav-link text-white">
+                    <a href="../PHP/FormAndReport.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                         Report
                     </a>
                 </li>
                 <li>
-                    <a href="HTML/Resume.html" class="nav-link text-white">
+                    <a href="../HTML/Resume.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                         Resume
                     </a>
@@ -68,14 +76,14 @@ session_start();
                 if(!empty($_SESSION['logged_in'])){
                     ?>
                     <li>
-                        <a href="HTML/Resume.html" class="nav-link text-white">
+                        <a href="../HTML/Resume.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                             Resume
                         </a>
                     </li>
 
                     <li>
-                        <a href="HTML/Resume.html" class="nav-link text-white">
+                        <a href="../HTML/Resume.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                             Resume
                         </a>
@@ -91,41 +99,46 @@ session_start();
 
 </div>
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
+    <fieldset></fieldset>
+    <form method="POST" action="../PHP/MakeReview.php" class="mb-3 h3 fw-normal align-content-center">
+        <h3 style="color: white"><label for="gName">Enter the game name</label></h3>
+        <input type="text" class="form-text" id="gName" maxlength="30" size="30" name="name">
 
-    <h2>Request Story</h2>
-    <button type="button" onclick="loadDoc()">Request story</button>
-    <p id="demo" style="color: white"></p>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        function loadDoc() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("demo").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "../taleof.txt");
-            xhttp.send();
-        }
-    </script>
-    <script>
-        function load2() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("tester").innerHTML = this.responseText;
-            }
-            xhttp.open("POST", "../tester.txt");
-            xhttp.send("fname=Noah&lname=Blake");
-        }
-    </script>
-    <button class="button" onclick="load2()">Do a Post method</button>
-    <br>
-    <p id="tester" style="color: white"></p>
-    <br>
-    <a href="../index.php">HOME</a>
+        <h3 style="color: white"><label for="gRating">Rating</label></h3>
+        <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" name="rat" >
+
+        <h3 style="color: white"><label for="notes">Game Notes</label></h3>
+        <textarea id="notes" name="gNotes" rows="4" cols="60" name="notes">
+        </textarea>
+        <br><br>
+
+        <button class="btn-outline-primary">Submit</button>
+
+        </fieldset>
+
+
+    </form>
 </article>
-
 
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </html>
+
+<?php
+} else {
+
+    $sql = "INSERT INTO `gameRev` (`gpu`,`cpu`,`ram`,`numOfFans`,`dspace`,`name`,`email`) VALUES ('$Gname','$Rate','$Notes')";
+    if (mysqli_query($mysqli, $sql)) {
+
+    }else{
+        echo "Please try again";
+
+    }
+
+
+    if (!isset($_POST['submit']))
+    {
+    }
+    ?>

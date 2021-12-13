@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<?php
-session_start();
-?>
 <html lang="en">
-<link rel="stylesheet" href="../https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <head>
     <meta charset="UTF-8">
@@ -12,16 +9,7 @@ session_start();
 <body class="w-100 bg-dark">
 
 <div class="card-header" >
-    <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
-    <?php
 
-    if(!empty($_SESSION['logged_in'])){
-        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='../PHP/logout.php' role='button'>Logout</a>";
-    }else{
-    echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='../PHP/applyaccount.php' role='button'>Register</a>";
-    echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='../HTML/Login.html' role='button'>Login</a>";
-    }
-    ?>
 
 </div>
 <div class="w-auto h-auto container-fluid">
@@ -63,65 +51,33 @@ session_start();
                         Resume
                     </a>
                 </li>
-                <?php
-
-                if(!empty($_SESSION['logged_in'])){
-                    ?>
-                <li>
-                    <a href="../HTML/Resume.php" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                        Resume
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../HTML/Resume.php" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                        Resume
-                    </a>
-                </li>
-
-                <?php
-                }
-                ?>
             </ul>
             <hr>
+        </div>
     </section>
 
 
 </div>
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
+    <fieldset></fieldset>
+    <form method="POST" action="../PHP/MakeReview.php" class="mb-3 h3 fw-normal align-content-center">
+        <h3 style="color: white"><label for="gName">Enter the game name</label></h3>
+        <input type="text" class="form-text" id="gName" maxlength="30" size="30">
 
-    <h2>Request Story</h2>
-    <button type="button" onclick="loadDoc()">Request story</button>
-    <p id="demo" style="color: white"></p>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        function loadDoc() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("demo").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "../taleof.txt");
-            xhttp.send();
-        }
-    </script>
-    <script>
-        function load2() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("tester").innerHTML = this.responseText;
-            }
-            xhttp.open("POST", "../tester.txt");
-            xhttp.send("fname=Noah&lname=Blake");
-        }
-    </script>
-    <button class="button" onclick="load2()">Do a Post method</button>
-    <br>
-    <p id="tester" style="color: white"></p>
-    <br>
-    <a href="../index.php">HOME</a>
-</article>
+        <h3 style="color: white"><label for="gRating">Rating</label></h3>
+        <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" >
+
+        <h3 style="color: white"><label for="notes">Game Notes</label></h3>
+        <textarea id="notes" name="gNotes" rows="4" cols="60">
+        </textarea>
+        <br><br>
+
+        <button class="btn-outline-primary">Submit</button>
+
+        </fieldset>
+
+
+    </form>
 </article>
 
 
