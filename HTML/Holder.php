@@ -102,7 +102,7 @@ session_start();
             xhttp.onload = function() {
                 document.getElementById("demo").innerHTML = this.responseText;
             }
-            xhttp.open("GET", "taleof.txt");
+            xhttp.open("GET", "../Jared_squatch.jpg");
             xhttp.send();
         }
     </script>
@@ -112,7 +112,7 @@ session_start();
             xhttp.onload = function() {
                 document.getElementById("tester").innerHTML = this.responseText;
             }
-            xhttp.open("POST", "tester.txt");
+            xhttp.open("POST", "../tester.txt");
             xhttp.send("fname=Noah&lname=Blake");
         }
     </script>
