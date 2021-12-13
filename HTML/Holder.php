@@ -15,11 +15,11 @@ session_start();
     <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
     <?php
 
-        if(!empty($_SESSION['logged_in'])){
-         echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
+    if(!empty($_SESSION['logged_in'])){
+        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
     }else{
-    echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='PHP/applyaccount.php' role='button'>Register</a>";
-    echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='HTML/Login.html' role='button'>Login</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='PHP/applyaccount.php' role='button'>Register</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='HTML/Login.html' role='button'>Login</a>";
     }
     ?>
 
@@ -65,25 +65,25 @@ session_start();
                 </li>
                 <?php
 
-                    if(!empty($_SESSION['logged_in'])){
+                if(!empty($_SESSION['logged_in'])){
                     ?>
-                <li>
-                    <a href="HTML/Resume.html" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                        Resume
-                    </a>
-                </li>
+                    <li>
+                        <a href="HTML/Resume.html" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                            Resume
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="HTML/Resume.html" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                        Resume
-                    </a>
-                </li>
+                    <li>
+                        <a href="HTML/Resume.html" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                            Resume
+                        </a>
+                    </li>
 
-                <?php
-
-                    ?>
+                    <?php
+                }
+                ?>
             </ul>
             <hr>
     </section>
@@ -125,6 +125,7 @@ session_start();
 <footer class="card-footer text-center fixed-bottom" style="color: white;">
     <p class="center">Contact: noahb@gmail.com</p>
 </footer>
+
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

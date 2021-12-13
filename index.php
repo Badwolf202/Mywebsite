@@ -75,9 +75,9 @@ session_start();
                         </li>
 
                         <li>
-                            <a href="HTML/Resume.html" class="nav-link text-white">
+                            <a href="HTML/Holder.php" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                                Resume
+                                Holder
                             </a>
                         </li>
 
