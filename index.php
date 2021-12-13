@@ -31,7 +31,7 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="HTML/JQuery.html" class="nav-link active" aria-current="page">
+                        <a href="HTML/JQuery.html" class="nav-link text-white" aria-current="page">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                             JQuery
                         </a>
@@ -70,7 +70,21 @@
 
 
     <div class="container-fluid text-center position-fixed">
-        <p style="color: white; margin: 15px; font-size: large;">Hello there gamer</p>
+         <?php
+
+         $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
+         $data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
+         echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
+         echo "<table class='table'>";
+         echo "<thead><tr><td>Game Name</td><td> Rating</td><td>Notes</td></tr></thead>";
+         //write out the current ticket
+         echo "<tbody>";
+         while ($row = $data->fetch_assoc()) {
+             echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
+         }
+         echo "</tbody>";
+         echo "</table><br>";]
+         ?>
     </div>
 
 
