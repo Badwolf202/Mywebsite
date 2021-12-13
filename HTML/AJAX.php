@@ -90,7 +90,7 @@ session_start();
     <p id="demo" style="color: white"></p>
     <br>
     <div id="three" style="color: white">
-        <h1>The XMLHttpRequest Object</h1>
+        <h1>On Ready</h1>
         <button type="button" onclick="loadDoc3()">On Ready</button>
     </div>
     <br>

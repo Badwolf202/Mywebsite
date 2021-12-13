@@ -128,8 +128,8 @@ session_start();
     <br>
     <h2 class="h2">CERTIFICATIONS</h2><br>
     <p>
-        ▪Food Safe Level #1
-        ▪W.H.M.I.S.
+        ▪Food Safe Level #1<br>
+        ▪W.H.M.I.S.<br>
         ▪Gateway to technology
         program
     </p>
