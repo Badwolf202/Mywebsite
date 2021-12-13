@@ -3,11 +3,7 @@
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
 echo "2";
-$data = mysqli_query($mysqli, "SELECT * FROM gameRev");
-
-if (!$mysqli -> query("SELECT * from `gameRev`;")) {
-    echo("Error description: " . $mysqli -> error);
-}
+$data = mysqli_query($mysqli, "SELECT * FROM 'gameRev';");
 echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
 echo "<table>";
 echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
