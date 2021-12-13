@@ -14,7 +14,7 @@ $lowerEmail = strtolower($email);
     }
     else
     {
-        $sql = "INSERT INTO `users` (`email`,`pass`) VALUES ('$lowerEmail',SHA1('$password'))";
+        $sql = "INSERT INTO `user` (`email`,`pass`) VALUES ('$lowerEmail',SHA1('$password'))";
         if (mysqli_query($mysqli, $sql))
         {
             echo "<h3 class='h3 mb-3 text-center' style='text-align: center'>Your Account has been created! Thank you for joining us!<h3>";
