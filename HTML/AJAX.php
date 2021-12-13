@@ -122,7 +122,8 @@ session_start();
     <br>
     <a href="../index.php">HOME</a>
 </article>
-<footer class="text-center fixed-bottom" style="color: white;">
+</article>
+<footer class="text-center bottom-0 float blockquote-footer float" style="color: white;">
     <p class="center">Contact: noahb@gmail.com</p>
 </footer>
 

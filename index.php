@@ -40,7 +40,7 @@ session_start();
                         </a>
                     </li>
                     <li>
-                        <a href="HTML/AJAX.html" class="nav-link text-white">
+                        <a href="HTML/AJAX.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                             AJAX
                         </a>
@@ -111,7 +111,8 @@ session_start();
         echo "</table><br>";
         ?>
     </article>
-    <footer class="text-center fixed-bottom" style="color: white;">
+    </article>
+    <footer class="text-center bottom-0 float blockquote-footer float" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
     </footer>
 
