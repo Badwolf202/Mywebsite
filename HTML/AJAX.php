@@ -86,8 +86,13 @@ session_start();
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
 
     <h2>Request Story</h2>
-    <button class="btn-outline-primary" type="button" onclick="loadDoc()">Request story</button>
+    <button style="color: white" class="btn-outline-primary" type="button" onclick="loadDoc()">Request story</button>
     <p id="demo" style="color: white"></p>
+
+    <div id="three">
+        <h1>The XMLHttpRequest Object</h1>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function loadDoc() {
@@ -98,8 +103,6 @@ session_start();
             xhttp.open("GET", "../taleof.txt");
             xhttp.send();
         }
-    </script>
-    <script>
         function load2() {
             const xhttp = new XMLHttpRequest();
             xhttp.onload = function() {
@@ -107,6 +110,18 @@ session_start();
             }
             xhttp.open("POST", "../tester.txt");
             xhttp.send("fname=Noah&lname=Blake");
+        }
+
+        function loadDoc3() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("three").innerHTML =
+                        this.responseText;
+                }
+            };
+            xhttp.open("GET", "useThis.txt", true);
+            xhttp.send();
         }
     </script>
     <button class="btn-outline-primary"  type="button" onclick="load2()">Do a Post method</button>
