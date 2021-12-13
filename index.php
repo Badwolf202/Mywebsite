@@ -11,7 +11,6 @@
     <title>Noah's Site</title>
 </head>
 <body class="w-100 bg-dark">
-<div class="content">
     <div class="card-header" >
         <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
 
@@ -63,7 +62,6 @@
             </div>
     </div>
 
-
     <div class="container-fluid text-center position-fixed">
         <?php
 $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
@@ -91,6 +89,6 @@ $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
     </footer>
     </section>
 
-</div>
+
 </body>
 </html>
