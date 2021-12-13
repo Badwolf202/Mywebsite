@@ -97,7 +97,7 @@ if (!isset($_POST['submit']))
         <h3 style="color: white"><label for="gName">Enter the game name</label></h3>
         <input type="text" class="form-text" id="gName" maxlength="30" size="30" name="name">
 
-        <h3 style="color: white"><label for="gRating">Rating</label></h3>
+        <h3 style="color: white"><label for="gRating">Rating (1-5)</label></h3>
         <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" name="rat" >
 
         <h3 style="color: white"><label for="notes">Game Notes</label></h3>
