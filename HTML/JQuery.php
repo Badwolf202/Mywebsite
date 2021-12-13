@@ -91,8 +91,7 @@ session_start();
 </div>
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
 
-</article>
-</article>
+
 <style>
     * {box-sizing: border-box;}
     .mySlides {display: none;}
@@ -159,19 +158,19 @@ session_start();
 
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="pic1.png" style="width:100%">
+            <img src="Screenshot_2.png" style="width:100%">
             <!--    <div class="text">captions</div>-->
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="pic2.jpg" style="width:100%">
+            <img src="KROMER.gif" style="width:100%">
             <!--    <div class="text">captions</div>-->
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="pic3.jpg" style="width:100%">
+            <img src="2dbcms7xovr71.jpg" style="width:100%">
             <!--    <div class="text">captions</div>-->
         </div>
 
@@ -208,6 +207,8 @@ session_start();
             setTimeout(showSlides, 4000);
         }
     </script>
+</article>
+
 
 </div>
 </body>
