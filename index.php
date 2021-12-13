@@ -111,7 +111,7 @@ session_start();
         echo "</table><br>";
         ?>
     </article>
-    <footer class="card-footer text-center fixed-bottom" style="color: white;">
+    <footer class="text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
     </footer>
 
