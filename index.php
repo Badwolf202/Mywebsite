@@ -8,7 +8,7 @@
     <title>Noah's Site</title>
 </head>
 <body class="w-100 bg-dark">
-<div class="content">
+
     <div class="card-header" >
         <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
 
@@ -64,6 +64,7 @@
 
 
     </div>
+    <div class="content">
     <div class="container-fluid text-center position-fixed float-end" style="padding: 25px">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
@@ -79,6 +80,7 @@
         echo "</tbody>";
         echo "</table><br>";
         ?>
+    </div>
     </div>
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
