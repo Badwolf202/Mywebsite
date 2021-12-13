@@ -3,16 +3,9 @@
 <?php
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
-$conn = new mysqli("localhost", "noahb", "letmein");
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo " 2";
 $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
-echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
-echo "<table>";
+echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
+echo "<table class='table-borderless'>";
 echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
 //write out the current ticket
 echo "<tbody>";
@@ -23,8 +16,6 @@ echo "</tbody>";
 echo "</table><br>";
 
 echo '<a href ="index.php">Back to menu!';
-
-echo "3";
 
 ?>
 <title>Super Secret Records</title>
