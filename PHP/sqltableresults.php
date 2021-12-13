@@ -3,7 +3,7 @@
 <?php
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
-$conn = new mysqli(localhost, root, letmein);
+$conn = new mysqli("localhost", "root", "letmein");
 
 // Check connection
 if ($conn->connect_error) {
