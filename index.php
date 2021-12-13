@@ -74,7 +74,7 @@
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
-    echo "Connected successfully";
+    echo " <p style='color: white'>Connected successfully</p>";
 
     echo "<table class='table'>";
     echo "<thead><tr><td>Game Name</td><td> Rating</td><td>Notes</td></tr></thead>";
