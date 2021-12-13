@@ -2,8 +2,8 @@
 <body style="background-color: darkslateblue">
 <?php
 echo "Hello From the PHP";
-$mysqli = new mysqli("localhost", "root", "letmein", "testDB");
-$conn = new mysqli("localhost", "root", "letmein");
+$mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
+$conn = new mysqli("localhost", "noahb", "letmein");
 
 // Check connection
 if ($conn->connect_error) {
