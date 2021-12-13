@@ -2,7 +2,7 @@
 <?php
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
-$data = mysqli_query($mysqli, "SELECT * FROM gameRev;");
+$data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
 echo "2";
 echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
 echo "<table>";
