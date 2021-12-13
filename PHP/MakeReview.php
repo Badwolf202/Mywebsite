@@ -4,7 +4,7 @@ session_start();
 $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
 $Gname = filter_input(INPUT_POST, 'name');
 $Rate = filter_input(INPUT_POST, 'rat');
-$Notes = filter_input(INPUT_POST, 'notes');
+$Notes = filter_input(INPUT_POST, 'gNotes');
 
 
 if (!isset($_POST['submit']))
@@ -108,7 +108,7 @@ if (!isset($_POST['submit']))
         <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" name="rat" >
 
         <h3 style="color: white"><label for="notes">Game Notes</label></h3>
-        <textarea id="notes" class="form-text" name="gNotes" rows="4" cols="60" name="notes"></textarea>
+        <textarea id="notes" class="form-text" name="gNotes" rows="4" cols="60" ></textarea>
         <br><br>
 
         <button class="btn-outline-primary" type="submit" value="submit" name="submit">Submit</button>

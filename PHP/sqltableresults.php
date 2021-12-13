@@ -69,7 +69,7 @@
 </div>
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
     <?php
-    echo "Hello From the PHP";
+
     $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
     $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
     echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
