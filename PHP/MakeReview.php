@@ -99,7 +99,7 @@ if (!isset($_POST['submit']))
 
 </div>
 <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
-    <fieldset></fieldset>
+    <fieldset>
     <form method="POST" action="../PHP/MakeReview.php" class="mb-3 h3 fw-normal align-content-center">
         <h3 style="color: white"><label for="gName">Enter the game name</label></h3>
         <input type="text" class="form-text" id="gName" maxlength="30" size="30" name="name">
@@ -108,12 +108,10 @@ if (!isset($_POST['submit']))
         <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" name="rat" >
 
         <h3 style="color: white"><label for="notes">Game Notes</label></h3>
-        <textarea id="notes" name="gNotes" rows="4" cols="60" name="notes">
-        </textarea>
+        <textarea id="notes" name="gNotes" rows="4" cols="60" name="notes"></textarea>
         <br><br>
 
-        <button class="btn-outline-primary" type="submit">Submit</button>
-
+        <button class="btn-outline-primary" type="submit" value="submit" name="submit">Submit</button>
         </fieldset>
 
 
@@ -128,7 +126,6 @@ if (!isset($_POST['submit']))
 
 <?php
 } else {
-
     $sql = "INSERT INTO `gameRev` (`gameName`,`rating`,`notes`) VALUES ('$Gname','$Rate','$Notes')";
     if (mysqli_query($mysqli, $sql)) {
 
