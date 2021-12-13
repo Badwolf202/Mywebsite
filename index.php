@@ -68,9 +68,9 @@ session_start();
                     if(!empty($_SESSION['logged_in'])){
                     ?>
                         <li>
-                            <a href="HTML/Resume.php" class="nav-link text-white">
+                            <a href="PHP/MakeReview.php" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                                Resume
+                                Make Review
                             </a>
                         </li>
 
