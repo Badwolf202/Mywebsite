@@ -4,7 +4,7 @@ $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
 $lowerEmail = strtolower($email);
 
-    $check = mysqli_query($mysqli, "SELECT * FROM `users` WHERE email = '$lowerEmail'");
+    $check = mysqli_query($mysqli, "SELECT * FROM `user` WHERE email = '$lowerEmail'");
     if(empty($email) || empty($password)){
         echo "one of the options was empty, please try again";
     } else if (mysqli_num_rows($check) != 0)

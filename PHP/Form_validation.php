@@ -44,9 +44,9 @@ if (!isset($_POST['submit']))
 }else{
 //$sql = "INSERT INTO `members` (`firstname`, `lastname`, `email`, `password`, `age`, `gender`,
  //`startdate`) VALUES ('$first', '$last', '$smallMail', SHA1('$password'),'$age', '$gender', CURRENT_DATE())";
-    $sql = "INSERT INTO `users` (`fname`,`lname`,`email`) VALUES ('$fname','$lname','$email')";
+    $sql = "INSERT INTO `user` (`fname`,`lname`,`email`) VALUES ('$fname','$lname','$email')";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-    $sql = "SELECT * from users;";
+    $sql = "SELECT * from user;";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
     echo "<h2 class='h2 mb-3' style='color: white'>Value inserted into table</h2>";
     echo "<a class='brn btn-outline-primary'>HOME</a>";

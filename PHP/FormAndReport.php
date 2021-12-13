@@ -9,7 +9,7 @@
 <body class="container-fluid bg-dark">
 <?php
     $mysqli = mysqli_connect("localhost", "noahb", "letmein", "testDB");
-    $sql = "SELECT * from users";
+    $sql = "SELECT * from user";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
         echo "<h2 class='h2 mb-3' style='color: white;'> User List: </h2>";
