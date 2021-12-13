@@ -4,10 +4,6 @@
 
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
 $data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
-
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
 echo " <p style='color: white'>Connected successfully</p>";
 echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
 echo "<table class='table'>";
@@ -21,7 +17,7 @@ echo "</table><br>";
 echo '<a href ="index.html">Back to menu!';
 
 ?>
-<title>Super Secret Records</title>
+<title>Game Reviews</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <body class="w-100 bg-dark">
 
