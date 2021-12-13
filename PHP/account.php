@@ -21,7 +21,7 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/PHP/createBuild.php">Make a build</a>
@@ -81,7 +81,7 @@ if (!isset($_POST['submit'])){
         $mysqli = new mysqli("localhost", "cs213user", "letmein", "compDB");
         $data = mysqli_query($mysqli, "UPDATE fart SET pass = SHA1('$newpass') WHERE email = '$temp' ");
         echo "<h3 class='h3 mb-3 text-center' style='text-align: center'>Password has been changed<h3>";
-        echo "<h6 class='h6 mb-3 text-center' style='text-align: center'><a href='../index.html' >Back to main</a></h6>";
+        echo "<h6 class='h6 mb-3 text-center' style='text-align: center'><a href='../index.php' >Back to main</a></h6>";
 
     }else{
         exit;

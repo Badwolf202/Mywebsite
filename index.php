@@ -18,7 +18,7 @@
     <div class="w-auto h-auto container-fluid">
         <section class="btn-toolbar h-100 float-left">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-                <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
                     <span class="fs-4" style="font-size: xx-large"><strong>Navbar</strong></span>
                 </a>
@@ -50,11 +50,6 @@
                     <li>
                     <a class="nav-link text-white" href="HTML/Resume.html">
                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>Resume</a></li>
-                    <li>
-                    <li>
-                        <a class="nav-link text-white" href="PHP/sqltableresults.php">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#game-reviws"/></svg>Reviews</a></li>
-                    <li>
                         <a class="nav-link text-white" href="https://www.linkedin.com/in/noah-blake-4aa9a5226/">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>LinkedIn</a></li>
                     <li>
@@ -67,7 +62,24 @@
             </div>
 
     <div class="container-fluid">
+        <?php
+echo "Hello From the PHP";
+$mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
+$data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
+//echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
+        echo "<table class='table-borderless'>";
+        echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
+        //write out the current ticket
+        echo "<tbody>";
+        while ($row = $data->fetch_assoc()) {
+        echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
+            }
+            echo "</tbody>";
+        echo "</table><br>";
 
+        echo '<a href ="index.php">Back to menu!';
+
+        ?>
     </div>
 
     <footer class="card-footer text-center fixed-bottom" style="color: white;">

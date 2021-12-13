@@ -4,7 +4,7 @@
 echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
 $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
-echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
+//echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
 echo "<table class='table-borderless'>";
 echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
 //write out the current ticket
