@@ -64,7 +64,7 @@
 
 
     </div>
-    <div class="container text-center position-fixed float-right">
+    <div class="container-fluid text-center position-fixed float-end">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
@@ -74,7 +74,7 @@
         //write out the current ticket
         echo "<tbody>";
         while ($row = $data->fetch_assoc()) {
-            echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
+            echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td>";
         }
         echo "</tbody>";
         echo "</table><br>";

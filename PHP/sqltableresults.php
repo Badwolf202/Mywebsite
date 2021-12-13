@@ -10,7 +10,7 @@ echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
 //write out the current ticket
 echo "<tbody>";
 while ($row = $data->fetch_assoc()) {
-    echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
+    echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td>";
 }
 echo "</tbody>";
 echo "</table><br>";
