@@ -83,7 +83,7 @@
              echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
          }
          echo "</tbody>";
-         echo "</table><br>";]
+         echo "</table><br>";
          ?>
     </div>
 
