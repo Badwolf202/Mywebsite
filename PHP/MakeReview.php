@@ -95,13 +95,13 @@ if (!isset($_POST['submit']))
     <fieldset>
     <form method="POST" action="../PHP/MakeReview.php" class="mb-3 h3 fw-normal align-content-center">
         <h3 style="color: white"><label for="gName">Enter the game name</label></h3>
-        <input type="text" class="form-text" id="gName" maxlength="30" size="30" name="name">
+        <input type="text" class="form-text" id="gName" maxlength="30" size="30" name="name" required>
 
         <h3 style="color: white"><label for="gRating">Rating (1-5)</label></h3>
-        <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" name="rat" >
+        <input type="number" class="form-check" id="gRating" min="1" max="5" maxlength="1" size="1" name="rat" required >
 
         <h3 style="color: white"><label for="notes">Game Notes</label></h3>
-        <textarea id="notes" class="form-text" name="gNotes" rows="4" cols="60" ></textarea>
+        <textarea id="notes" class="form-text" name="gNotes" rows="4" cols="60"  required></textarea>
         <br><br>
 
         <button class="btn-outline-primary" type="submit" value="submit" name="submit">Submit</button>
