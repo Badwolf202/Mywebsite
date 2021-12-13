@@ -1,7 +1,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <?php
+echo "Hello From the PHP";
 $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
 $data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
+echo "2";
 echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
 echo "<table>";
 echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
@@ -14,6 +16,8 @@ echo "</tbody>";
 echo "</table><br>";
 
 echo '<a href ="index.php">Back to menu!';
+
+echo "3";
 
 ?>
 <title>Super Secret Records</title>
