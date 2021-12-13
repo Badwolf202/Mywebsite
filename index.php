@@ -112,9 +112,7 @@ session_start();
         ?>
     </article>
     </article>
-    <footer class="text-center bottom-0 float blockquote-footer float" style="color: white;">
-        <p class="center">Contact: noahb@gmail.com</p>
-    </footer>
+
 
 
 
