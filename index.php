@@ -69,11 +69,17 @@
             </div>
 
     <div class="container-fluid text-center position-fixed">
+        <style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>
          <?php
 
          $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
          $data = mysqli_query($mysqli, "SELECT * from `gameRev`;");
-         echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
+
+         if ($mysqli->connect_error) {
+             die("Connection failed: " . $mysqli->connect_error);
+         }
+         echo "Connected successfully";
+
          echo "<table class='table'>";
          echo "<thead><tr><td>Game Name</td><td> Rating</td><td>Notes</td></tr></thead>";
          echo "<tbody>";
