@@ -23,7 +23,7 @@ $lowerEmail = strtolower($email);
         if (mysqli_query($mysqli, $sql))
         {
             echo "<h3 class='h3 mb-3 text-center' style='text-align: center'>Your Account has been created! Thank you for joining us!<h3>";
-            echo "<h6 class='h6 mb-3 text-center' style='text-align: center'><a href='../index.php' >Back to main</a></h6>";
+            echo "<h6 class='h6 mb-3 text-center' style='text-align: center'><a href='../index.html' >Back to main</a></h6>";
 
         }
 

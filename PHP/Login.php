@@ -4,7 +4,7 @@ session_start();
 if ((!filter_input(INPUT_POST, 'email'))
     || (!filter_input(INPUT_POST, 'password'))) {
 if ((!isset($_POST["username"])) || (!isset($_POST["password"]))) {
-    header("Location: ../index.php");
+    header("Location: ../index.html");
     exit;
 }
 }
@@ -34,7 +34,7 @@ if (mysqli_num_rows($result) == 1) {
     $_SESSION['userName'] = $fname . "'s";
     $_SESSION['email'] = $email;
     setcookie("auth", session_id(), time()+60*30, "/", "", 0);
-    header("Location: ../index.php");
+    header("Location: ../index.html");
 
 } else {
     echo "failed";
