@@ -16,7 +16,7 @@
         <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
 
     </div>
-    <div class="w-auto h-auto container-fluid">
+    <div class="w-25 h-100 container-fluid">
         <section class="btn-toolbar h-100 float-left">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
                 <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -61,6 +61,8 @@
                 </ul>
                 <hr>
             </div>
+    </div>
+
 
     <div class="container-fluid text-center position-fixed">
         <?php
@@ -81,12 +83,14 @@ $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
 
         ?>
     </div>
+
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
     </footer>
     </section>
+
 </div>
 </body>
 </html>
