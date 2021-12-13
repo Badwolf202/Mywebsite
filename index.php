@@ -64,7 +64,7 @@
 
 
     </div>
-    <div class="container  text-center position-fixed">
+    <div class="container text-center position-fixed float-right">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
@@ -78,9 +78,6 @@
         }
         echo "</tbody>";
         echo "</table><br>";
-
-        echo '<a href ="index.php">Back to menu!';
-
         ?>
     </div>
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
