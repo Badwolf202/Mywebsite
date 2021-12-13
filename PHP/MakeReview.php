@@ -42,7 +42,7 @@ if (!isset($_POST['submit']))
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="../HTML/JQuery.php" class="nav-link active" aria-current="page">
+                    <a href="../HTML/JQuery.php" class="nav-link" aria-current="page">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                         JQuery
                     </a>
@@ -54,15 +54,9 @@ if (!isset($_POST['submit']))
                     </a>
                 </li>
                 <li>
-                    <a href="../PHP/Form_validation.php" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                        Form Validation
-                    </a>
-                </li>
-                <li>
-                    <a href="../PHP/FormAndReport.php" class="nav-link text-white">
+                    <a href="../PHP/sqltableresults.php" class="nav-link text-white">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                        Report
+                        All Reviews
                     </a>
                 </li>
                 <li>
@@ -76,19 +70,18 @@ if (!isset($_POST['submit']))
                 if(!empty($_SESSION['logged_in'])){
                     ?>
                     <li>
-                        <a href="../HTML/Resume.php" class="nav-link text-white">
+                        <a href="../PHP/MakeReview.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                            Resume
+                            Make Review
                         </a>
                     </li>
 
                     <li>
-                        <a href="../HTML/Resume.php" class="nav-link text-white">
+                        <a href="../HTML/Holder.html" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                            Resume
+                            Holder (Tester Page)
                         </a>
                     </li>
-
                     <?php
                 }
                 ?>
