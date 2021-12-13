@@ -87,8 +87,8 @@ session_start();
         echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
         //write out the current ticket
         echo "<tbody>";
-        $count = 1;
-        while ($row = $data->fetch_assoc() && $count != 5) {
+        $count = 0;
+        while ($row = $data->fetch_assoc() && $count <= 5) {
             echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td>";
             $count++;
         }
