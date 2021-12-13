@@ -112,7 +112,7 @@ if (!isset($_POST['submit']))
         </textarea>
         <br><br>
 
-        <button class="btn-outline-primary">Submit</button>
+        <button class="btn-outline-primary" type="submit">Submit</button>
 
         </fieldset>
 
@@ -129,7 +129,7 @@ if (!isset($_POST['submit']))
 <?php
 } else {
 
-    $sql = "INSERT INTO `gameRev` (`gpu`,`cpu`,`ram`,`numOfFans`,`dspace`,`name`,`email`) VALUES ('$Gname','$Rate','$Notes')";
+    $sql = "INSERT INTO `gameRev` (`gameName`,`rating`,`notes`) VALUES ('$Gname','$Rate','$Notes')";
     if (mysqli_query($mysqli, $sql)) {
 
     } else {
