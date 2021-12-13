@@ -64,7 +64,7 @@
 
 
     </div>
-    <div class="container-fluid text-center position-fixed float-end">
+    <div class="container-fluid text-center position-fixed float-end" style="padding: 25px">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
