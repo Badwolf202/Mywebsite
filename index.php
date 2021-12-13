@@ -90,7 +90,7 @@ session_start();
 
 
     </div>
-    <article class="container-sm" style="padding-left: 400px; padding-right: 200px; margin: 15px">
+    <article class="container-fluid" style="padding-left: 400px; padding-right: 200px; margin: 15px">
         <?php
         $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
