@@ -1,9 +1,3 @@
-<?php
-
-
-?>
-
-
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -68,8 +62,9 @@
                 <hr>
             </div>
 
-    <div class="container-fluid text-center position-fixed">
-        <style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>
+    <div class="container-fluid>
+        <style>
+        td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>
          <?php
 
          $mysqli = new mysqli("localhost", "root", "letmein", "testDB");
@@ -90,9 +85,6 @@
          echo "</table><br>";
          ?>
     </div>
-
-
-
 
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>
