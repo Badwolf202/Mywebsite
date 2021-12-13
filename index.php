@@ -77,7 +77,6 @@
          echo "<style>td{border: 1px solid black; color:blue}, tr {border: 1px solid black; color:blue}</style>";
          echo "<table class='table'>";
          echo "<thead><tr><td>Game Name</td><td> Rating</td><td>Notes</td></tr></thead>";
-         //write out the current ticket
          echo "<tbody>";
          while ($row = $data->fetch_assoc()) {
              echo "<tr><td>" . $row["gameName"] . "</td><td>" . $row["rating"] . "</td><td>" . $row["notes"] . "</td><td>";
