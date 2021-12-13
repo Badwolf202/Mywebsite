@@ -9,7 +9,16 @@
 <body class="w-100 bg-dark">
 
 <div class="card-header" >
+    <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
+    <?php
 
+    if(!empty($_SESSION['logged_in'])){
+        echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='../PHP/logout.php' role='button'>Logout</a>";
+    }else{
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='../PHP/applyaccount.php' role='button'>Register</a>";
+        echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='../HTML/Login.html' role='button'>Login</a>";
+    }
+    ?>
 
 </div>
 <div class="w-auto h-auto container-fluid">
@@ -63,8 +72,8 @@
     echo "Hello From the PHP";
     $mysqli = new mysqli("localhost", "noahb", "letmein", "testDB");
     $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
-    //echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
-    echo "<table class='table-borderless'>";
+    echo "<style>td{border: 1px solid black; color:white}, tr {border: 1px solid black; color:white}</style>";
+    echo "<table class='table'>";
     echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
     //write out the current ticket
     echo "<tbody>";
