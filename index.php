@@ -16,10 +16,7 @@ session_start();
         <?php
 
         if(!empty($_SESSION['logged_in'])){
-            echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='PHP/account.php' role='button'>".$_SESSION['userName']." Account"."</a>";
-            echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
-
-
+         echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
         }else{
             echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='PHP/applyaccount.php' role='button'>Register</a>";
             echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='HTML/Login.html' role='button'>Login</a>";
@@ -37,25 +34,25 @@ session_start();
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="JQuery.html" class="nav-link active" aria-current="page">
+                        <a href="HTML/JQuery.html" class="nav-link active" aria-current="page">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                             JQuery
                         </a>
                     </li>
                     <li>
-                        <a href="AJAX.html" class="nav-link text-white">
+                        <a href="HTML/AJAX.html" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                             AJAX
                         </a>
                     </li>
                     <li>
-                        <a href="Form_validation.php" class="nav-link text-white">
+                        <a href="PHP/Form_validation.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
                             Form Validation
                         </a>
                     </li>
                     <li>
-                        <a href="FormAndReport.php" class="nav-link text-white">
+                        <a href="PHP/FormAndReport.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                             Report
                         </a>
@@ -66,12 +63,27 @@ session_start();
                             Resume
                         </a>
                     </li>
-<!--                    <li>-->
-<!--                        <a href="FormAndReport.php" class="nav-link text-white">-->
-<!--                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>-->
-<!--                            Report-->
-<!--                        </a>-->
-<!--                    </li>-->
+                    <?php
+
+                    if(!empty($_SESSION['logged_in'])){
+                    ?>
+                        <li>
+                            <a href="HTML/Resume.html" class="nav-link text-white">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                                Resume
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="HTML/Resume.html" class="nav-link text-white">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                                Resume
+                            </a>
+                        </li>
+
+                        <?php
+                    }
+                    ?>
                 </ul>
                 <hr>
         </section>
