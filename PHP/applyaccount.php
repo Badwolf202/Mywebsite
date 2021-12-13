@@ -11,8 +11,6 @@
         <form method="post" action="makeAcoount.php" class="mb-3 h3 fw-normal align-content-center">
         <h1 class="h3 mb-3" style="color: white">Create account</h1>
         <div class="form-floating">
-                <input type="text" name="Fname" required placeholder="First Name"/></p>
-                <input type="text" name="Lname"required placeholder="Last name"/></p>
                 <input type="email" name="email"required placeholder="Email"/></p>
                 <input type="password" name="password"required placeholder="Password"/></p>
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" roll="button">Create account!</button>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<!--<?php?>-->
+<?php
+session_start();
+?>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -11,6 +13,18 @@
 
     <div class="card-header" >
         <h2 class="h2 mb-3 text-center" style="color: white"><strong>Welcome to Noah's website</strong></h2>
+        <?php
+
+        if(!empty($_SESSION['logged_in'])){
+            echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='PHP/account.php' role='button'>".$_SESSION['userName']." Account"."</a>";
+            echo "<a class='btn btn-outline-danger my-2 my-sm-0' href='PHP/logout.php' role='button'>Logout</a>";
+
+
+        }else{
+            echo "<a class='btn btn-outline-primary my-2 my-sm-0 ' href='PHP/applyaccount.php' role='button'>Register</a>";
+            echo "<a class='btn btn-outline-primary my-2 my-sm-0' href='HTML/Login.html' role='button'>Login</a>";
+        }
+        ?>
 
     </div>
     <div class="w-auto h-auto container-fluid">
@@ -48,18 +62,6 @@
                     </li>
                 </ul>
                 <hr>
-                <div class="dropdown">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://cdn.discordapp.com/attachments/816093593399328800/896114209484595250/2dbcms7xovr71.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-                        <strong>  Calibur202</strong>
-                    </a>
-                </div>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item" href="Resume.html">Resume</a></li>
-                    <li><a class="dropdown-item" href="https://www.linkedin.com/in/noah-blake-4aa9a5226/">LinkedIn</a></li>
-                    <li><a class="dropdown-item" href="https://noahb742252897.wordpress.com/">Blog</a></li>
-                </ul>
-            </div>
         </section>
 
 
@@ -70,7 +72,7 @@
         $data = mysqli_query($mysqli, "SELECT * FROM `gameRev`;");
         echo "<style>td{font-size: large; color:white;}, tr { font-size: large; color:white;}</style>";
         echo "<table class='table table-bordered'>";
-        echo "<thead class='text-center'><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
+        echo "<thead><tr><td>Game</td><td>Rating</td><td>Notes</td></tr></thead>";
         //write out the current ticket
         echo "<tbody>";
         while ($row = $data->fetch_assoc()) {
@@ -78,7 +80,7 @@
         }
         echo "</tbody>";
         echo "</table><br>";
-?>
+        ?>
     </article>
     <footer class="card-footer text-center fixed-bottom" style="color: white;">
         <p class="center">Contact: noahb@gmail.com</p>

@@ -9,7 +9,7 @@ $lowerEmail = strtolower($email);
 
 
     $check = mysqli_query($mysqli, "SELECT * FROM `fart` WHERE email = '$lowerEmail'");
-    if(empty($email) || empty($FName) || empty($LName) || empty($password)){
+    if(empty($email) || empty($password)){
         echo "one of the options was empty, please try again";
     } else if (mysqli_num_rows($check) != 0)
     {
