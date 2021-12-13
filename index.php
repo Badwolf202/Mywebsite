@@ -34,7 +34,7 @@ session_start();
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="HTML/JQuery.html" class="nav-link active" aria-current="page">
+                        <a href="HTML/JQuery.php" class="nav-link active" aria-current="page">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                             JQuery
                         </a>
@@ -58,7 +58,7 @@ session_start();
                         </a>
                     </li>
                     <li>
-                        <a href="HTML/Resume.html" class="nav-link text-white">
+                        <a href="HTML/Resume.php" class="nav-link text-white">
                             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                             Resume
                         </a>
@@ -68,7 +68,7 @@ session_start();
                     if(!empty($_SESSION['logged_in'])){
                     ?>
                         <li>
-                            <a href="HTML/Resume.html" class="nav-link text-white">
+                            <a href="HTML/Resume.php" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
                                 Resume
                             </a>
